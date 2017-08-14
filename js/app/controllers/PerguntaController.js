@@ -2,7 +2,7 @@ class PerguntaController {
     constructor() {
 
         this._selecionado = null;
-        this._perguntas = document.querySelectorAll(".question")
+        this._perguntas = document.querySelectorAll(".question");
         this._perguntaModel = new Pergunta();
         this._questoes = this._perguntaModel.perguntas;
         //console.log();
@@ -14,7 +14,7 @@ class PerguntaController {
 
 
     seleciona(elemento) {
-        this._perguntas.forEach(n => n.classList.remove("selected"));
+        this._perguntas.forEach(n => n.className.remove("selected"));
         elemento.classList.add("selected");
         this._selecionado = elemento.textContent;
     }
